@@ -1,0 +1,32 @@
+{
+  "scripts": {
+    "start-api": "nodemon --exec babel-node api/index.js",
+    "start-bot": "nodemon --exec babel-node bot/index.js",
+    "build": "babel src --out-dir dist",
+    "serve": "node dist/index.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "nodemon": "^1.19.1",
+    "opn": "^6.0.0",
+    "prettier": "^1.18.2"
+  },
+  "dependencies": {
+    "app-root-path": "^2.2.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "mongoose": "^5.5.14",
+    "morgan": "^1.9.1",
+    "node-telegram-bot-api": "^0.30.0",
+    "rand-token": "^0.4.0",
+    "winston": "^3.2.1"
+  }
+}
