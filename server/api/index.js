@@ -7,6 +7,8 @@ import rateLimit from 'express-rate-limit'
 import cors from 'cors'
 import opn from 'opn'
 
+import authRoutes from './routes/auth'
+
 const dotenvError = dotenv.config()
 
 if (dotenvError.error) {
@@ -48,6 +50,8 @@ const init = async () => {
       res.status(200).json({ message: `I'm alive` })
     })
 
+    app.use('/auth', authRoutes)
+
     await app.listen(port)
 
     console.log(`Server is running on port ${port}.`)
@@ -55,9 +59,8 @@ const init = async () => {
     // if (process.env.NODE_ENV === 'dev') {
     //   opn(`http://localhost:${port}`)
     // }
-
   } catch (e) {
-    console.log(e)
+    // console.log(e)
   }
 }
 
